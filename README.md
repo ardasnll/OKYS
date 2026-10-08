@@ -1,1 +1,1 @@
-Ben, Hasan Arda Şenel ve bu benim geliştirdiğim bir Online Kütüphane Yönetim Sistemi 
+Adım Hasan Arda Şenel ve bu proje ise Nesneye Yönelik Programlama dersinin 2.Hafta Uygulama Ödevi. (Online Kütüphane Yönetim Sistemi) 
