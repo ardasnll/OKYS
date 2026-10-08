@@ -1,27 +1,29 @@
-import java.time.LocalDate;
 public class OduncKaydi {
     private int islemNo;
-    private LocalDate oduncTarihi;
-    private LocalDate sonTeslimTarihi;
-    private LocalDate teslimTarihi;
+    private String oduncTarihi;
+    private String sonTeslimTarihi;
+    private String teslimTarihi;
 
     private Uye uye;
     private KitapKopyasi kitapKopyasi;
 
-    public OduncKaydi(int islemNo, Uye uye, KitapKopyasi kitapKopyasi, LocalDate oduncTarihi, LocalDate sonTeslimTarihi) {
+    public OduncKaydi(int islemNo, Uye uye, KitapKopyasi kitapKopyasi, String oduncTarihi, String sonTeslimTarihi) {
         this.islemNo = islemNo;
         this.uye = uye;
         this.kitapKopyasi = kitapKopyasi;
         this.oduncTarihi = oduncTarihi;
         this.sonTeslimTarihi = sonTeslimTarihi;
-        this.teslimTarihi = null;
+        this.teslimTarihi = "Henüz teslim edilmedi"; // Basit metin ataması
     }
 
     public void bilgileriYazdir() {
-        System.out.println("=== Ödünç Kaydı #" + islemNo + " ===");
-        System.out.println("Üye: " + uye.getAd() + " (ID: " + uye.getId() + ")");
-        System.out.println("Kitap: " + kitapKopyasi.getKitap().getBaslik() + " - " + kitapKopyasi.getKitap().getYazar());
-        System.out.println("Kopya Barkod: " + kitapKopyasi.getBarkod());
-        System.out.println("Ödünç Tarihi: " + oduncTarihi + " | Son Teslim: " + sonTeslimTarihi);
+        System.out.println("--- ÖDÜNÇ ALMA KAYDI ---");
+        System.out.println("İşlem No: " + islemNo);
+        System.out.println("Üye: " + uye.getAd());
+        System.out.println("Kitap: " + kitapKopyasi.getKitap().getBaslik());
+        System.out.println("Barkod No: " + kitapKopyasi.getBarkod());
+        System.out.println("Ödünç Tarihi: " + oduncTarihi);
+        System.out.println("Son Teslim Tarihi: " + sonTeslimTarihi);
+        System.out.println("Durum: " + teslimTarihi);
     }
 }
